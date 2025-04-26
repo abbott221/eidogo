@@ -1,5 +1,5 @@
 function tx(s) {
-    if (eidogo.p18n[s]) return eidogo.p18n[s];
+    if (eidogo.i18n[s]) return eidogo.i18n[s];
     return s;
 }
 
