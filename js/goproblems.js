@@ -105,6 +105,11 @@ go.problems.Player.prototype = {
 
     this.validateConfiguration();
 
+    sgfString = this.configuration.sgf
+    if (!this.configuration.sgf) {
+      sgfString = $("#" + containerId).html()
+    }
+
     this.cfg = {
       progressiveLoad:    false,
       markCurrent:        true,
@@ -117,7 +122,7 @@ go.problems.Player.prototype = {
       showNavTree:        false,
       problemMode:        true,
       showProblemComments: true,
-      sgf:                $("#" + containerId).html()
+      sgf:                sgfString
     };
 
     var hooks = {
