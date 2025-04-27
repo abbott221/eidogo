@@ -81,7 +81,13 @@
     }
     function getDecodedSGF() {
       sgfEncoded = getUrlParameter('sgf')
+      if (!sgfEncoded) {
+        return null
+      }
       sgfDecoded = decodeURIComponent(sgfEncoded)
+      if (!sgfDecoded) {
+        return null
+      }
       return sgfDecoded
     }
 
